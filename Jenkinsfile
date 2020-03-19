@@ -9,7 +9,7 @@ checkPreviousEnvironment()
     }
 }
 
-void checkPreviousEnvironment(){
+def checkPreviousEnvironment(){
     env='QA'
   datas = readYaml file: '/Users/harinder/Documents/sharedlibraryv2/config.yml'
   
