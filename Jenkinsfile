@@ -3,9 +3,9 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-priviousEnvironment = checkPreviousEnvironment()
+ 
 
-function1(priviousEnvironment)
+checkOutput(checkPreviousEnvironment())
 
 }
 }
@@ -42,7 +42,7 @@ def checkPreviousEnvironment(){
 
 }
 
-void function1(priviousEnvironment){
+void checkOutput(priviousEnvironment){
   if (priviousEnvironment=="Not Applicable"){
 
   println "Deployment will continue"
