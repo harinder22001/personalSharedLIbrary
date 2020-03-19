@@ -1,3 +1,5 @@
+
+def  env='QA'
 pipeline {
     agent any
     stages {
@@ -13,7 +15,7 @@ checkOutput(checkPreviousEnvironment())
 }
 
 def checkPreviousEnvironment(){
-    env='QA'
+   
   datas = readYaml file: '/Users/harinder/Documents/sharedlibraryv2/config.yml'
   
  indexOfPreviousEnvironement=null
