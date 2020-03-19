@@ -16,7 +16,7 @@ pipeline {
 
 def checkPreviousEnvironment(env){
    
-  datas = readYaml file: '/Users/harinder/Documents/sharedlibraryv2/config.yml'
+  datas = readYaml file: 'resources/config.yml'
   
  indexOfPreviousEnvironement=null
   for(int i=0;i<datas.size();i++){
