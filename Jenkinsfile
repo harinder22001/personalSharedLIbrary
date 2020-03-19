@@ -42,7 +42,7 @@ def checkPreviousEnvironment(){
 
 }
 
-void function1(){
+void function1(priviousEnvironment){
   if (priviousEnvironment=="Not Applicable"){
 
   println "Deployment will continue"
