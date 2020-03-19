@@ -7,7 +7,7 @@ pipeline {
             steps {
  
 
-checkOutput(checkPreviousEnvironment())
+checkOutput(checkPreviousEnvironment(env))
 
 }
 }
