@@ -5,24 +5,7 @@ pipeline {
             steps {
 priviousEnvironment = checkPreviousEnvironment()
 
-if (priviousEnvironment=="Not Applicable"){
-
-  println "Deployment will continue"
-
-   echo "\033[32m### Deployment will continue in environment ${env}  ###\033[0m"
-
-}else if (priviousEnvironment == "Error"){
-
-   echo "\033[31m[ERROR] :  Environment not found in config file \033[0m"
-
-  }else{
-
-       echo "\033[32m### List of previous environments  ${env} is: ${priviousEnvironment} ###\033[0m"
-
-
-
-
-  }
+function1(priviousEnvironment)
 
 }
 }
@@ -57,4 +40,25 @@ def checkPreviousEnvironment(){
       }  
 
 
+}
+
+void function1(){
+  if (priviousEnvironment=="Not Applicable"){
+
+  println "Deployment will continue"
+
+   echo "\033[32m### Deployment will continue in environment ${env}  ###\033[0m"
+
+}else if (priviousEnvironment == "Error"){
+
+   echo "\033[31m[ERROR] :  Environment not found in config file \033[0m"
+
+  }else{
+
+       echo "\033[32m### List of previous environments  ${env} is: ${priviousEnvironment} ###\033[0m"
+
+
+
+
+  }
 }
