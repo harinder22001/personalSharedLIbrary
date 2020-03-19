@@ -1,0 +1,13 @@
+---
+
+- Dev:
+  - dev1
+  - dev2
+
+- QA:
+  - QA1
+
+- Preprod:
+  - preprod1
+  - preprod2
+
