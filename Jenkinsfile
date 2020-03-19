@@ -14,7 +14,7 @@ checkOutput(checkPreviousEnvironment(env))
     }
 }
 
-def checkPreviousEnvironment(){
+def checkPreviousEnvironment(env){
    
   datas = readYaml file: '/Users/harinder/Documents/sharedlibraryv2/config.yml'
   
