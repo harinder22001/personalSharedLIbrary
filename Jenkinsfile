@@ -1,5 +1,5 @@
 
-def  env='QA'
+def  env='asdf'
 pipeline {
     agent any
     stages {
