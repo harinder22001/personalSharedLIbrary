@@ -49,7 +49,7 @@ void checkOutput(priviousEnvironment){
 
   println "Deployment will continue"
 
-   echo "\033[32m### Deployment will continue in environment ${env}  ###\033[0m"
+   echo "\033[32m### Deployment will continue in environment   ###\033[0m"
 
 }else if (priviousEnvironment == "Error"){
 
