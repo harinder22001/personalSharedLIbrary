@@ -6,7 +6,7 @@ pipeline {
 checkPreviousEnvironment()
 }
 }
-
+    }
 }
 
 checkPreviousEnvironment(){
@@ -41,5 +41,3 @@ checkPreviousEnvironment(){
 
 
 }
-}
-
