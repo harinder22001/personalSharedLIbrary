@@ -7,7 +7,7 @@ pipeline {
             steps {
  
 
-                checkOutput(checkPreviousEnvironment(${env}))
+                checkOutput(checkPreviousEnvironment(env))
 
 }
 }
@@ -57,7 +57,7 @@ void checkOutput(priviousEnvironment){
 
   }else{
 
-       echo "\033[32m### List of previous environments  ${env} is: ${priviousEnvironment} ###\033[0m"
+       echo "\033[32m### List of previous environments is: ${priviousEnvironment} ###\033[0m"
 
 
 
