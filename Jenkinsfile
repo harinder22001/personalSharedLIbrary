@@ -3,7 +3,27 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-checkPreviousEnvironment()
+priviousEnvironment = checkPreviousEnvironment()
+
+if (priviousEnvironment=="Not Applicable"){
+
+  println "Deployment will continue"
+
+   echo "\033[32m### Deployment will continue in environment ${env}  ###\033[0m"
+
+}else if (priviousEnvironment == "Error"){
+
+   echo "\033[31m[ERROR] :  Environment not found in config file \033[0m"
+
+  }else{
+
+       echo "\033[32m### List of previous environments  ${env} is: ${priviousEnvironment} ###\033[0m"
+
+
+
+
+  }
+
 }
 }
     }
@@ -20,13 +40,10 @@ def checkPreviousEnvironment(){
         indexOfPreviousEnvironement = i-1
         if(i!=0){
           
-          println "list of previous environemtns - " + datas.get(indexOfPreviousEnvironement).values().flatten()
-          println "continue with deployment"
-          break;
+          return datas.get(indexOfPreviousEnvironement).values().flatten()
       }else{
          
-          println "Continue with deploymebnt"
-          break;
+          return "Not Applicable"
       }
      
      }
@@ -36,7 +53,7 @@ def checkPreviousEnvironment(){
 
        if (indexOfPreviousEnvironement == null){
 
-        println "environment not found"
+        return "Error"
       }  
 
 
