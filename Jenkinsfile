@@ -27,7 +27,7 @@ def checkPreviousEnvironment(env){
         indexOfPreviousEnvironement = i-1
         if(i!=0){
           println "here"
-            println "env list is " + datas.get(indexOfPreviousEnvironement).values()
+            println "env list is " + datas.get(indexOfPreviousEnvironement).values().flatten()
           //return datas.get(indexOfPreviousEnvironement).values()['env']
       }else{
          
