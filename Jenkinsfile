@@ -7,8 +7,8 @@ pipeline {
             steps {
  
 
-                checkOutput(checkPreviousEnvironment(env))
-
+           //     checkOutput(checkPreviousEnvironment(env))
+                checkPreviousEnvironment(env)
 }
 }
     }
@@ -25,7 +25,8 @@ def checkPreviousEnvironment(env){
         indexOfPreviousEnvironement = i-1
         if(i!=0){
           
-          return datas.get(indexOfPreviousEnvironement).values().flatten()
+            println datas.get(indexOfPreviousEnvironement).values()['env']
+          //return datas.get(indexOfPreviousEnvironement).values()['env']
       }else{
          
           return "Not Applicable"
