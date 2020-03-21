@@ -19,7 +19,9 @@ def checkPreviousEnvironment(env){
   datas = readYaml file: 'resources/environmentsSequence.yml'
   
  indexOfPreviousEnvironement=null
+    println 1
   for(int i=0;i<datas.size();i++){
+      println 2
      
       if(datas.get(i)[env]){
         indexOfPreviousEnvironement = i-1
