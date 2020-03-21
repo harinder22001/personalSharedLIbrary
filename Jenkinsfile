@@ -28,6 +28,8 @@ def checkPreviousEnvironment(env){
         if(i!=0){
           println "here"
             
+            println "dictionary of previous environemnt" + datas.get(indexOfPreviousEnvironement).values().get(0)
+            
                         println "env list is " + datas.get(indexOfPreviousEnvironement).values().get(0)['env']
              println "first element is " + datas.get(indexOfPreviousEnvironement).values().get(0)['env'].get(0)
              println "second element is " + datas.get(indexOfPreviousEnvironement).values().get(0)['env'].get(1)
