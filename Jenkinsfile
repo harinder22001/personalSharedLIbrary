@@ -7,8 +7,8 @@ pipeline {
             steps {
  
 
-           //     checkOutput(checkPreviousEnvironment(env))
-                checkPreviousEnvironment(env)
+              checkOutput(checkPreviousEnvironment(env))
+               // checkPreviousEnvironment(env)
 }
 }
     }
@@ -26,16 +26,12 @@ def checkPreviousEnvironment(env){
       if(datas.get(i)[env]){
         indexOfPreviousEnvironement = i-1
         if(i!=0){
-          println "here"
+       
             
-            println "dictionary of previous environemnt" + datas.get(indexOfPreviousEnvironement).values().get(0)
             
-                        println "env list is " + datas.get(indexOfPreviousEnvironement).values().get(0)['env']
-             println "first element is " + datas.get(indexOfPreviousEnvironement).values().get(0)['env'].get(0)
-             println "second element is " + datas.get(indexOfPreviousEnvironement).values().get(0)['env'].get(1)
-
-            println "percentage is " + datas.get(indexOfPreviousEnvironement).values().flatten().get(0)['percentage']
-          //return datas.get(indexOfPreviousEnvironement).values()['env']
+              return datas.get(indexOfPreviousEnvironement).values().get(0)['env']
+           
+      
       }else{
          
           return "Not Applicable"
