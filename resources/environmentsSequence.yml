@@ -1,14 +1,14 @@
 ---
 
 - Dev:
-  - env: [dev1, dev2]
+    env: [dev1, dev2]
     percentage: 50
 
 - QA:
-  - env: [QA1]
+    env: [QA1]
     percentage: 40
   
 
 - Preprod:
-  - env: [preprod1, preprod2]
+    env: [preprod1, preprod2]
     percentage: 60
