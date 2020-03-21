@@ -29,8 +29,10 @@ def checkPreviousEnvironment(env){
           println "here"
             
                         println "env list is " + datas.get(indexOfPreviousEnvironement).values().get(0)['env']
+             println "first element is " + datas.get(indexOfPreviousEnvironement).values().get(0)['env'].get(0)
+             println "second element is " + datas.get(indexOfPreviousEnvironement).values().get(0)['env'].get(1)
 
-            println "env list is " + datas.get(indexOfPreviousEnvironement).values().flatten().get(0)
+            println "percentage is " + datas.get(indexOfPreviousEnvironement).values().flatten().get(0)['percentage']
           //return datas.get(indexOfPreviousEnvironement).values()['env']
       }else{
          
